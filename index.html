@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Study Portal</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="/homepage/home.css">
+
+    <script src="/homepage/handleHome.js" defer></script>
+    <script src="/handleAllPages.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1 id="welcome" class="big-header">Welcome To <span class="accent" id="accent">AP Study Portal</span></h1>
+        <div id="form">
+            <label for="user">Username:</label>
+            <input id='user' name='user' type='text'><br>
+
+            <label for="pass">Password:</label>
+            <input id='pass' name='pass' type='password'>
+
+            <button type='submit' id="authLogin" onclick="authorizeAcc()">Enter Account</button>
+            
+        </div>
+        <h3>First Time With Us?<a id='create' href='/homepage/create-login/createlogin.html'>Create Login</a></h3>
+
+        <button type="button" id="themeBtn">Invert Color Theme</button>
+    </header>
+</body>
+</html>

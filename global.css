@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --accent-color: #023C40;
+    --major-color: #FCFCFF;
+
+    --shadow: #2B3D41;
+
+    --inverse-accent: #FCFCFF;
+    --inverse-color: #023C40;
+}
+
+body {
+    background-color: var(--major-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 6em;
+}
+
+p {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1em;
+}
+
+label, input, button[type='submit'] {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2em;
+}
+
+input, button[type="submit"], button[type="button"] {
+    border: 1px solid  var(--accent-color);
+}
+
+.big-header {
+    margin: 17px;
+}
+
+.big-header .accent, 
+.big-header .accent, 
+.big-header .accent{
+    padding: 25px;
+    background-color: var(--accent-color);
+    color: var(--major-color);
+}
+
+a, a:active, a:visited {
+    color: var(--major-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button[type="submit"], button[type="button"]{
+    margin: 10px;
+    padding: 5px;
+    color: var(--accent-color);
+    background-color: var(--major-color);
+}
+button[type="submit"]:hover, button[type="button"]:hover {
+    background-color: var(--accent-color);
+    color: var(--major-color);
+    transition: ease-in-out 0.3s;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Study Portal: Create Login</title>
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/homepage/create-login/createlogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="/homepage/handleHome.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1 id="welcome"><span id='portal'>Welcome To</span> AP Study Portal</h1>
+        <div id="createLoginForm">
+            <label for="user">Username:</label>
+            <input id='user' name='user' type='text'><br>
+
+            <label for="pass">Password:</label>
+            <input id='pass' name='pass' type='password'>
+
+            <label for="word">Confirm Password:</label>
+            <input id='word' name='word' type='password'>
+
+            <button type='submit' id="createlogin" onclick="createAccStorage()">Create Login</button>
+        </div>
+        
+    </header>
+</body>
+</html>

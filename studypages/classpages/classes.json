@@ -1,0 +1,71 @@
+[
+    {
+        "class" : "human-geography",
+        "flashcards" : true,
+        "practice-exams" : {
+            "mcq" : true,
+            "frq" : true,
+            "saq" : false,
+            "dbq" : false,
+            "leq" : false,
+            "eoc" : false
+        },
+        "notes" : true
+    },
+
+    {
+        "class" : "seminar",
+        "flashcards" : false,
+        "practice-exams" : {
+            "mcq" : false,
+            "frq" : false,
+            "saq" : false,
+            "dbq" : false,
+            "leq" : false,
+            "eoc" : true
+        },
+        "notes" : true
+    },
+
+    {
+        "class" : "world-history",
+        "flashcards" : true,
+        "practice-exams" : {
+            "mcq" : true,
+            "frq" : false,
+            "saq" : true,
+            "dbq" : true,
+            "leq" : true,
+            "eoc" : false
+        },
+        "notes" : true
+    },
+
+    {
+        "class" : "united-states-history",
+        "flashcards" : true,
+        "practice-exams" : {
+            "mcq" : true,
+            "frq" : false,
+            "saq" : true,
+            "dbq" : true,
+            "leq" : true,
+            "eoc" : false
+        },
+        "notes" : true
+    },
+
+    {
+        "class" : "language-and-composition",
+        "flashcards" : true,
+        "practice-exams" : {
+            "mcq" : true,
+            "frq" : true,
+            "saq" : false,
+            "dbq" : false,
+            "leq" : false,
+            "eoc" : false
+        },
+        "notes" : true
+    }
+]

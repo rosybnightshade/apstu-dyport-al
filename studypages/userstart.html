@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Your Class</title>
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/studypages/userstart.css">
+    <!--Scripts-->
+    <script src="/studypages/classpages/classes.js" defer></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <script>
+        const header = document.createElement('header');
+        header.innerHTML = `
+        <h1 id="welcome">Start Studying, ${sessionStorage.getItem('loggedIn')}! </h1>
+
+       <input type="search" id="class-search" placeholder="Search for Your AP Class">
+        `
+
+        document.body.append(header)
+    </script>
+
+    <div class="classes" id="all-classes">
+        <div class="class" id="HuG">
+            <h3><a id="human-geography" onclick="loadClass('human-geography')">AP Human Geography</a></h3>
+            <img src="/studypages/class icons/ap-humangeo.svg">
+            <p>The study of society, humans, and culture</p>
+        </div>
+
+        <div class="class" id="seminar">
+            <h3><a id="seminar" onclick="loadClass('seminar')">AP Seminar</a></h3>
+            <img src="/studypages/class icons/ap-seminar.svg">
+            <p>Study the whole of research and teamwork</p>
+        </div>
+
+        <div class="class" id="world-history">
+            <h3><a id="world-history" onclick="loadClass('world-history')">AP World History</a></h3>
+            <img src="/studypages/class icons/ap-worldhistory.svg">
+            <p>The interworkings of the world from the beginning</p>
+        </div>
+
+        <div class="class" id="us-history">
+            <h3><a id="us-history" onclick="loadClass('united-states-history')">AP United States History</a></h3>
+            <img src="/studypages/class icons/ap-ushistory.svg">
+            <p>'Merica: "WHAT IS A KILOMETER!!" 🦅🦅</p>
+        </div>
+
+        <div class="class" id="lang-and-comp">
+            <h3><a id="lang-and-comp" onclick="loadClass('language-and-composition')">AP Language and Composition</a></h3>
+            <img src="/studypages/class icons/ap-langandcomp.svg">
+            <p>More writing than reading</p>
+        </div>
+
+    </div>
+</body>
+</html>

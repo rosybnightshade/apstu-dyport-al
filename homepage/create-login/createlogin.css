@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+#portal {
+    background-color: var(--accent-color);
+    color: var(--major-color);
+    padding: 25px;
+}
+#welcome {
+    margin: 27px;
+}
+
+h1 {
+    font-size: 6em;
+}
+
+h3 {
+    margin-top: 5px;
+}
+
+#createLoginForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    width: 40%;
+}

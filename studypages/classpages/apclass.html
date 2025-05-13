@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/studypages/indiv-class.css">
+    <!--Scripts-->
+    <script src="/studypages/classpages/classes.js" defer></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const classFile = JSON.parse(sessionStorage.getItem("currentCourse"));
+    
+    if (classFile) {
+        const header = document.createElement('header');
+        header.innerHTML = `
+            <h1 class="big-header">Welcome To <br> <span id="inverse" class="accent">${classFile.class}</span></h1>
+        `;
+        
+        document.body.appendChild(header);
+    }
+
+    // if (flashCards == true) {
+    //     const section = document.createElement('section');
+    //     section.innerHTML = `
+    //         <div id="flashcards">
+    //             <h3> Flashcards <h3>
+    //             <img src='studypages/class icons/flashcards.svg'>
+    //         </div>
+    //     `
+    //     document.body.appendChild(section);
+    // }
+});
+</script>
+</html>
