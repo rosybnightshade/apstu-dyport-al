@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="activities.css">
-    <script src="flashcards.js" defer></script>
     <script src="classes.js" defer></script>
+    <script src="flashcards.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,10 +15,11 @@
 <body>
     <script>
         const classFile = JSON.parse(sessionStorage.getItem("currentCourse"));
+        console.log(classFile)
         document.title = classFile.class;
     </script>
 
-    <div class="flashcard-container hidden" id="flashcard-container">
+    <div class="flashcard-container" id="flashcard-container">
             <div class="progress">
                 <span id="current-card">1</span>/<span id="total-cards">5</span>
             </div>

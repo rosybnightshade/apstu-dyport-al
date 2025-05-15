@@ -19,8 +19,10 @@
 
     </section>
 </body>
-<script>
+<script>                               
     document.addEventListener("DOMContentLoaded", () => {
+    
+    let username = sessionStorage.getItem('loggedIn');
 
     const classFile = JSON.parse(sessionStorage.getItem("currentCourse"));
     
@@ -30,6 +32,61 @@
             <h1 class="big-header">Welcome To <br> <span id="inverse" class="accent">${classFile.class}</span></h1>
         `;
         document.body.prepend(header);
+
+        const checkComplete = document.createElement('div');
+        checkComplete.id = 'checked'
+        header.prepend(checkComplete);
+
+        let status = "Not Yet Completed"
+        const savedStatus = getCompletionCookie(username, "courseStatus");
+        if (savedStatus) {
+            status = savedStatus;
+        }
+        checkComplete.innerHTML = 
+        `
+        <h4>This Course Has Been ${status}</h4>
+        `
+        checkComplete.style.backgroundColor = 'red';
+        checkComplete.style.display = 'flex';
+        checkComplete.style.placeItems = 'center';
+        checkComplete.style.padding = '5px';
+        checkComplete.style.height = '50px';
+        header.style.display = 'flex';
+
+        checkComplete.addEventListener('click', handleCompletion);
+
+        function getCompletionCookie(username, key, status) {
+            const name  = `${username}_${key}=`
+            const cookies = document.cookie
+                .split('; ')
+                .find(row => row.startsWith(name));
+                return cookies ? cookies.split('=')[1] : null;
+            
+        }
+
+        function setCompletionCookie(username, key, status) {
+            const courseCookie = `${username}_${key}`
+            document.cookie = `${courseCookie}=${status};`
+        }
+
+        function handleCompletion() {
+        if (status == "Not Yet Completed") {
+            status = "Completed"
+            checkComplete.style.backgroundColor = 'green';
+            checkComplete.innerHTML = `
+?            <h4>This Course Has Been ${status}</h4>
+            `
+            setCompletionCookie(username, "courseStatus", status);
+            
+        } else {
+            status = "Not Yet Completed"
+            checkComplete.style.backgroundColor = 'red';
+            checkComplete.innerHTML = `
+            <h4>This Course Has Been ${status}</h4>
+            `
+            setCompletionCookie(username, "courseStatus", status);
+        }
+    }
     }
 
     if (classFile.flashcards == true) {

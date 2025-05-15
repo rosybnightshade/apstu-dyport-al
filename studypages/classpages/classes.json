@@ -2,70 +2,30 @@
     {
         "class" : "humanGeography",
         "flashcards" : true,
-        "practice-exams" : {
-            "mcq" : true,
-            "frq" : true,
-            "saq" : false,
-            "dbq" : false,
-            "leq" : false,
-            "eoc" : false
-        },
         "notes" : true
     },
 
     {
         "class" : "seminar",
-        "flashcards" : false,
-        "practice-exams" : {
-            "mcq" : false,
-            "frq" : false,
-            "saq" : false,
-            "dbq" : false,
-            "leq" : false,
-            "eoc" : true
-        },
+        "flashcards" : true,
         "notes" : true
     },
 
     {
         "class" : "worldHistory",
         "flashcards" : true,
-        "practice-exams" : {
-            "mcq" : true,
-            "frq" : false,
-            "saq" : true,
-            "dbq" : true,
-            "leq" : true,
-            "eoc" : false
-        },
         "notes" : true
     },
 
     {
         "class" : "USHistory",
         "flashcards" : true,
-        "practice-exams" : {
-            "mcq" : true,
-            "frq" : false,
-            "saq" : true,
-            "dbq" : true,
-            "leq" : true,
-            "eoc" : false
-        },
         "notes" : true
     },
 
     {
         "class" : "languageAndComposition",
         "flashcards" : true,
-        "practice-exams" : {
-            "mcq" : true,
-            "frq" : true,
-            "saq" : false,
-            "dbq" : false,
-            "leq" : false,
-            "eoc" : false
-        },
         "notes" : true
     }
 ]
