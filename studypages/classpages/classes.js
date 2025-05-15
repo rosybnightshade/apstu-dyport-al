@@ -24,6 +24,8 @@ const humanGeography = {
   "sequent occupancy": "the succession of groups and cultural influences throughout a places history"
 }
 
+localStorage.setItem('humanGeography', JSON.stringify(humanGeography));
+
 const seminar = {
   "Primary Source": "Original material or evidence directly related to the topic (e.g., interviews, diaries, original research).",
   "Secondary Source": "Analysis or interpretation of primary sources (e.g., journal articles, reviews).",
@@ -31,6 +33,8 @@ const seminar = {
   "News Article": "Non-scholarly current events coverage; consider bias.",
   "Government Document": "Official data or laws from public institutions."
 }
+
+localStorage.setItem('seminar', JSON.stringify(seminar));
 
 const worldHistory = {
   "American Revolution": "Colonists sought independence from British rule.",
@@ -40,6 +44,8 @@ const worldHistory = {
   "Industrial Revolution": "Shift to mechanized production; began in Britain."
 }
 
+localStorage.setItem('worldHistory', JSON.stringify(worldHistory));
+
 const USHistory = {
   "Brown v. Board (1954)": "Desegregated public schools.",
   "Montgomery Bus Boycott": "Rosa Parks sparked boycott led by MLK Jr.",
@@ -48,6 +54,8 @@ const USHistory = {
   "Malcolm X": "Advocated for Black empowerment and self-defense."
 }
 
+localStorage.setItem('USHistory', JSON.stringify(USHistory));
+
 const langComp = {
   "Anaphora": "Repetition of a word/phrase at the beginning of successive clauses. Ex: 'We shall fight...'",
   "Antithesis": "Juxtaposition of contrasting ideas. Ex: 'It was the best of times, it was the worst of times.'",
@@ -55,3 +63,5 @@ const langComp = {
   "Pathos": "Appeal to emotion. Ex: 'Think of the children!'",
   "Logos": "Appeal to logic/reason. Ex: 'Studies show a 60% increase...'",
 }
+
+localStorage.setItem('langComp', JSON.stringify(langComp));

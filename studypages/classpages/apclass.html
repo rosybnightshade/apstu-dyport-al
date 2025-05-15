@@ -15,7 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <section id="activities" class="activities">
 
+    </section>
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -27,20 +29,32 @@
         header.innerHTML = `
             <h1 class="big-header">Welcome To <br> <span id="inverse" class="accent">${classFile.class}</span></h1>
         `;
-        
-        document.body.appendChild(header);
+        document.body.prepend(header);
     }
 
-    // if (flashCards == true) {
-    //     const section = document.createElement('section');
-    //     section.innerHTML = `
-    //         <div id="flashcards">
-    //             <h3> Flashcards <h3>
-    //             <img src='studypages/class icons/flashcards.svg'>
-    //         </div>
-    //     `
-    //     document.body.appendChild(section);
-    // }
+    if (classFile.flashcards == true) {
+        const section = document.createElement('section');
+        const whole = document.getElementById('activities')
+        section.innerHTML = `
+            <div class="act" id="flashcards">
+                <h4><a href="flashcards.html">Flashcards</a><h4>
+                <img src='/studypages/class%20icons/flashcards.svg'>
+            </div>
+        `
+        whole.appendChild(section);
+    }
+
+    if (classFile.notes == true) {
+        const section = document.createElement('section');
+        const whole = document.getElementById('activities')
+        section.innerHTML = `
+            <div class="act" id="notes">
+                <h4> Notes <h4>
+                <img src='/studypages/class%20icons/notes.svg'>
+            </div>
+        `
+        whole.appendChild(section);
+    }
 });
 </script>
 </html>

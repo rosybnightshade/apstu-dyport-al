@@ -1,6 +1,6 @@
 [
     {
-        "class" : "human-geography",
+        "class" : "humanGeography",
         "flashcards" : true,
         "practice-exams" : {
             "mcq" : true,
@@ -28,7 +28,7 @@
     },
 
     {
-        "class" : "world-history",
+        "class" : "worldHistory",
         "flashcards" : true,
         "practice-exams" : {
             "mcq" : true,
@@ -42,7 +42,7 @@
     },
 
     {
-        "class" : "united-states-history",
+        "class" : "USHistory",
         "flashcards" : true,
         "practice-exams" : {
             "mcq" : true,
@@ -56,7 +56,7 @@
     },
 
     {
-        "class" : "language-and-composition",
+        "class" : "languageAndComposition",
         "flashcards" : true,
         "practice-exams" : {
             "mcq" : true,

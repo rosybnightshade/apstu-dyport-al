@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="activities.css">
+    <script src="flashcards.js" defer></script>
+    <script src="classes.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <script>
+        const classFile = JSON.parse(sessionStorage.getItem("currentCourse"));
+        document.title = classFile.class;
+    </script>
+
+    <div class="flashcard-container hidden" id="flashcard-container">
+            <div class="progress">
+                <span id="current-card">1</span>/<span id="total-cards">5</span>
+            </div>
+            <div class="controls">
+                <button id="prev-btn">Previous</button>
+                <button id="flip-btn">Flip Card</button>
+                <button id="next-btn">Next</button>
+            </div>
+            <div id="flashcard-display">
+                <div class="controls">
+                    <button id="restart-btn">Start over</button>
+                    <button id="shuffle-btn">Shuffle Cards</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
