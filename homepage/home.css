@@ -4,6 +4,8 @@ header {
     align-items: center;
     margin: 15px;
     color: var(--accent-color);
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 #portal {
@@ -29,4 +31,11 @@ h3 {
 a, a:active, a:visited {
     color: var(--accent-color);
     text-decoration: none;
+}
+
+
+@media (max-width: 755px) {
+    header {
+        place-self: center;
+    }
 }

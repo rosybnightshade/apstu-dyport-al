@@ -1,8 +1,3 @@
-function searchCourses(query) {
-    const searchTerm = document.getElementById('class-search');
-    
-}
-
 function loadClass(className) {
     fetch(`${document.location.origin}/studypages/classpages/classes.json`)
         .then(response => response.json())

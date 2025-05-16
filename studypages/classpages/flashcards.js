@@ -133,4 +133,3 @@ if (state.flashcards.length > 0) {
   } else {
     console.warn("No flashcards found for this class.");
   }
-  

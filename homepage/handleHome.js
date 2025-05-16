@@ -44,7 +44,7 @@ function authorizeAcc() {
     try {
         for (let i=1;i<=1000;i++) {
         if (username.value == localStorage.getItem(`username${i}`) && password.value == localStorage.getItem(`password${i}`)) {
-            window.location.href = "studypages/userstart.html"
+            window.location.href = "studypages/userstart.html";
             sessionStorage.setItem("loggedIn", username.value);
         } else { 
             console.error("error");

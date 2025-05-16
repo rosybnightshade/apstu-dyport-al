@@ -13,7 +13,7 @@ h4 {
 }
 .activities {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
     gap: 30px;
     margin: 10px;
@@ -37,4 +37,14 @@ h4 {
 }
 .timer {
     color: var(--accent-color);
+}
+
+@media (max-width: 968px) {
+    .activities {
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        font-size: 10px;
+    }
 }

@@ -28,3 +28,9 @@ h3 {
     margin-top: 5em;
     width: 40%;
 }
+
+@media (max-width: 685px) {
+    header {
+        place-self: center;
+    }
+}

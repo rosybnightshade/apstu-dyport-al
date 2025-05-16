@@ -1,7 +1,16 @@
-const themeBtn = document.getElementById('themeBtn');
+const themeBtn = document.getElementsByClassName('themeBtn');
 const body = document.body;
 const span = document.getElementById('welcome');
 const accent = document.getElementById('accent');
+const courses = document.getElementsByClassName('class')
+
+for (let btn of themeBtn){ 
+    btn.addEventListener('click', () => {
+        const current = getCookie('preference') || 'light';
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        invertTheme(newTheme);
+        alert(`Theme is now: ${newTheme.toUpperCase()} `);
+});}
 
 function setDarkTheme() {
     body.style.backgroundColor = 'var(--inverse-color)';
@@ -14,8 +23,15 @@ function setDarkTheme() {
         elements.style.border = '1px solid var(--inverse-color)';
     });
 
+    if (accent == true) {
     accent.style.backgroundColor = 'var(--inverse-accent)';
     accent.style.color = 'var(--inverse-color)';
+    }
+
+    if (courses == true) {
+    courses.style.backgroundColor = 'var(--inverse-accent)';
+    courses.style.color = 'var(--inverse-color)';
+    }
 }
 
 function setLightTheme() {
@@ -29,8 +45,10 @@ function setLightTheme() {
         elements.style.border = '1px solid var(--inverse-color)';
     });
 
+    if (accent == true) {
     accent.style.backgroundColor = 'var(--inverse-color)';
     accent.style.color = 'var(--inverse-accent)';
+    }
 }
 
 function styleElements(selector, callback) {
@@ -49,7 +67,7 @@ function getCookie(name) {
         const [key, val] = c.split('=');
         if (key === name) return val;
     }
-    return 0;
+    return "";
 }
 
 function invertTheme(pageTheme) {
@@ -65,11 +83,4 @@ function invertTheme(pageTheme) {
 document.addEventListener('DOMContentLoaded', () => {
     const saved = getCookie('preference') || 'light';
     invertTheme(saved);
-});
-
-themeBtn.addEventListener('click', () => {
-    const current = getCookie('preference') || 'light';
-    const newTheme = current === 'dark' ? 'light' : 'dark';
-    invertTheme(newTheme);
-    alert(`Theme is now: ${newTheme.toUpperCase()} `);
 });
