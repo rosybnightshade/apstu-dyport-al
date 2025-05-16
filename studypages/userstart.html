@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/studypages/userstart.css">
     <!--Scripts-->
     <script src="/studypages/classpages/classes.js" defer></script>
+    <script src="/handleAllPages.js" defer></script>
+    <script src="/studypages/handleSearch.js" defer></script>
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +23,11 @@
         header.innerHTML = `
         <h1 id="welcome">Start Studying, ${sessionStorage.getItem('loggedIn')}! </h1>
 
-       <input type="search" id="class-search" placeholder="Search for Your AP Class">
+       <input type="search" id="class-search" oninput="searchCourses()"placeholder="Search for Your AP Class">
         `
 
-        document.body.append(header)
+        document.body.append(header);
+
     </script>
 
     <div class="classes" id="all-classes">

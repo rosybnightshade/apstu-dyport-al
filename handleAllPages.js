@@ -6,7 +6,7 @@ const accent = document.getElementById('accent');
 function setDarkTheme() {
     body.style.backgroundColor = 'var(--inverse-color)';
 
-    styleElements('h1, h2, h3, h4, label,a', elements => {
+    styleElements('h1, h2, h3, h4, label, a', elements => {
         elements.style.color = 'var(--inverse-accent)';
     });
 
@@ -15,12 +15,11 @@ function setDarkTheme() {
     });
 
     accent.style.backgroundColor = 'var(--inverse-accent)';
-    accent.style.color = 'var(--inverse-color)'
-    
+    accent.style.color = 'var(--inverse-color)';
 }
 
 function setLightTheme() {
-   body.style.backgroundColor = 'var(--inverse-accent)';
+    body.style.backgroundColor = 'var(--inverse-accent)';
 
     styleElements('h1, h2, h3, h4, label, a', elements => {
         elements.style.color = 'var(--inverse-color)';
@@ -31,11 +30,26 @@ function setLightTheme() {
     });
 
     accent.style.backgroundColor = 'var(--inverse-color)';
-    accent.style.color = 'var(--inverse-accent)'
+    accent.style.color = 'var(--inverse-accent)';
 }
 
 function styleElements(selector, callback) {
     document.querySelectorAll(selector).forEach(callback);
+}
+
+function setCookie(name, value, days = 365) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days*24*60*60*1000));
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+}
+
+function getCookie(name) {
+    const cookies = document.cookie.split('; ');
+    for (const c of cookies) {
+        const [key, val] = c.split('=');
+        if (key === name) return val;
+    }
+    return 0;
 }
 
 function invertTheme(pageTheme) {
@@ -45,23 +59,17 @@ function invertTheme(pageTheme) {
         setLightTheme();
     }
 
-    localStorage.setItem('preference', pageTheme);
+    setCookie('preference', pageTheme);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const saved = localStorage.getItem('preference') || 'light';
+    const saved = getCookie('preference') || 'light';
     invertTheme(saved);
 });
 
 themeBtn.addEventListener('click', () => {
-    const current = localStorage.getItem('preference') || 'light';
+    const current = getCookie('preference') || 'light';
     const newTheme = current === 'dark' ? 'light' : 'dark';
     invertTheme(newTheme);
-    alert(`Theme set to ${newTheme.toUpperCase()} ✨`);
+    alert(`Theme is now: ${newTheme.toUpperCase()} `);
 });
-
-function createThemeButton() {
-    const button = document.createElement('div');
-    button.innerHTML = `<img src='studypages/class icons/changetheme.svg'`
-    document.body.appendChild('button');
-}
