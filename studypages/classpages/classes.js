@@ -15,16 +15,3 @@ function loadClass(className) {
         });
 }
 
-const completedCourses = [];
-
-let courseCompletion = document.getElementById('checked');
-
-if (courseCompletion.style.backgroundColor == 'green') {
-  completedCourses.push()
-}
-
-
-
-for (const [key, value] of Object.entries(flashcardDatabase)) {
-  localStorage.setItem(key, JSON.stringify(value));
-}

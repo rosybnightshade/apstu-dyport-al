@@ -35,3 +35,6 @@ h4 {
     place-content: center;
     border-radius: 10px;
 }
+.timer {
+    color: var(--accent-color);
+}
