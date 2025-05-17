@@ -31,6 +31,10 @@
     padding: 20px;
 }
 
+.flashcard-front::before {
+    content: '...';
+}
+
 .flashcard-back {
     transform: rotateY(180deg);
 }

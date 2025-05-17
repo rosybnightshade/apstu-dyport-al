@@ -4,36 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AP Study Portal</title>
+    <!--Stylesheets-->
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="./homepage/home.css"> 
-
+    <!--Scripts-->
     <script src="./homepage/handleHome.js" defer></script>
     <script src="./handleAllPages.js" defer></script>
-
+    <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="./studypages/class%20icons/book.ico">
 
 </head>
 <body>
     <header>
-        // heading, welcome
+        <!--heading, welcome-->
         <h1 id="welcome" class="big-header">Welcome To <span class="accent" id="accent">AP Study Portal</span></h1>
         <div id="form">
-            // username input for user
+            <!--username input for user-->
             <label for="user">Username:</label>
             <input id='user' name='user' type='text'><br>
-            // password  input for user
+            <!--password  input for user-->
             <label for="pass">Password:</label>
             <input id='pass' name='pass' type='password'>
-            // submit button
+            <!--submit button-->
             <button type='submit' id="authLogin" onclick="authorizeAcc()">Enter Account</button>
             
         </div>
+        <!--Create Login Prompt-->
         <h3>First Time With Us?<a id='create' href='./homepage/create-login/createlogin.html'>Create Login</a></h3>
-        <h3>Leaving Us?<a id='create' onclick="deleteAcc()">Delete Login</a></h3>
+        <!--Delete Account Prompt-->
+        <h3>Leaving Us?<a  onclick="deleteAcc()">Delete Login</a></h3>
             <button type="button" class="themeBtn">Invert Color Theme</button>
-        
+        <br>
+        <!--Available Course List-->
+        <div class="available">
+            <h2>Available Courses:</h2>
+            <ul>
+                <li>AP Human Geography</li>
+                <li>AP Seminar</li>
+                <li>AP World History</li>
+                <li>AP Language and Composition</li>
+                <li>AP United States History</li>
+            </ul>
+        </div>
     </header>
 </body>
 </html>

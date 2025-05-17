@@ -1,3 +1,4 @@
+/* Global Elements & Variables */
 * {
     padding: 0;
     margin: 0;
@@ -47,18 +48,6 @@ input, button[type="submit"], button[type="button"] {
     border: 1px solid  var(--accent-color);
 }
 
-.big-header {
-    margin: 17px;
-}
-
-.big-header .accent, 
-.big-header .accent, 
-.big-header .accent{
-    padding: 25px;
-    background-color: var(--accent-color);
-    color: var(--major-color);
-}
-
 a, a:active, a:visited {
     color: var(--major-color);
     text-decoration: none;
@@ -80,6 +69,20 @@ button[type="submit"]:hover, button[type="button"]:hover {
     color: var(--major-color);
     transition: ease-in-out 0.3s;
 }
+/* All Header Styles */
+.big-header {
+    margin: 17px;
+}
+
+.big-header .accent, 
+.big-header .accent, 
+.big-header .accent{
+    padding: 25px;
+    background-color: var(--accent-color);
+    color: var(--major-color);
+}
+
+/* All Theme Switch Buttons */
 #themeBtn {
     width: 38.5%;
     display:flex;

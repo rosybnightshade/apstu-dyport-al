@@ -2,7 +2,7 @@ const themeBtn = document.getElementsByClassName('themeBtn');
 const body = document.body;
 const span = document.getElementById('welcome');
 const accent = document.getElementById('accent');
-const courses = document.getElementsByClassName('class')
+const courses = document.getElementsByClassName('class');
 
 for (let btn of themeBtn){ 
     btn.addEventListener('click', () => {
@@ -28,10 +28,13 @@ function setDarkTheme() {
     accent.style.color = 'var(--inverse-color)';
     }
 
-    if (courses == true) {
-    courses.style.backgroundColor = 'var(--inverse-accent)';
-    courses.style.color = 'var(--inverse-color)';
-    }
+    const courses = document.querySelectorAll('.class');
+
+    courses.forEach(course => {
+        course.style.border = '1px solid var(--major-color)'; 
+        course.style.color = 'var(--major-color)'; 
+    });
+
 }
 
 function setLightTheme() {
@@ -49,6 +52,12 @@ function setLightTheme() {
     accent.style.backgroundColor = 'var(--inverse-color)';
     accent.style.color = 'var(--inverse-accent)';
     }
+
+    const courses = document.querySelectorAll('.class');
+
+    courses.forEach(course => {
+        course.style.color = 'var(--major-color)'; 
+    });
 }
 
 function styleElements(selector, callback) {
