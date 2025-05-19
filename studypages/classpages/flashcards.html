@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Stylesheets-->
-    <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="activities.css">
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="./activities.css">
     <!--Scripts-->
-    <script src="classes.js" defer></script>
-    <script src="flashcards.js" defer></script>
-    <script src="./handleAllPages.js" defer></script>
+    <script src="./classes.js" defer></script>
+    <script src="./flashcards.js" defer></script>
+    <script src="../../handleAllPages.js" defer></script>
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +25,17 @@
 
     <div class="flashcard-container" id="flashcard-container">
             <div class="progress">
-                <span id="current-card">1</span>/<span id="total-cards">5</span>
+                <h4 color="var(--major-color)"><span id="current-card">1</span>/<span id="total-cards">5</span></h4>
             </div>
             <div class="controls">
-                <button id="prev-btn">Previous</button>
-                <button id="flip-btn">Flip Card</button>
-                <button id="next-btn">Next</button>
+                <button type="button" id="prev-btn">Previous</button>
+                <button type="button" id="flip-btn">Flip Card</button>
+                <button type="button" id="next-btn">Next</button>
             </div>
             <div id="flashcard-display">
                 <div class="controls">
-                    <button id="restart-btn">Start over</button>
-                    <button id="shuffle-btn">Shuffle Cards</button>
+                    <button type="button" id="restart-btn">Start over</button>
+                    <button type="button" id="shuffle-btn">Shuffle Cards</button>
                 </div>
             </div>
         </div>

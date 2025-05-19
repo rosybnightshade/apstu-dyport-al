@@ -15,7 +15,7 @@ for (let btn of themeBtn){
 function setDarkTheme() {
     body.style.backgroundColor = 'var(--inverse-color)';
 
-    styleElements('h1, h2, h3, h4, label, a', elements => {
+    styleElements('h1, h2, h3, h4, label, a, li, ul', elements => {
         elements.style.color = 'var(--inverse-accent)';
     });
 
@@ -34,6 +34,12 @@ function setDarkTheme() {
         course.style.border = '1px solid var(--major-color)'; 
         course.style.color = 'var(--major-color)'; 
     });
+
+    const activities = document.querySelectorAll('.act');
+
+    activities.forEach(flashcards => {
+        flashcards.style.border = '1px solid var(--major-color)'
+    })
 
 }
 
